@@ -15,17 +15,17 @@ namespace Calculator.Tests
             }
         }
 
-        [Test]
-        [TestCaseSource(nameof(TestData))]
-        public int Add_Test(int num1, int num2)
-        {
-            /// AAA
+        //[Test]
+        //[TestCaseSource(nameof(TestData))]
+        //public int Add_Test(int num1, int num2)
+        //{
+        //    /// AAA
 
-            // 1. Arrange
-            CalculatorProgram calc = new CalculatorProgram();
+        //    // 1. Arrange
+        //    CalculatorProgram calc = new CalculatorProgram();
 
-            // Act
-            return calc.Add(num1, num2);
-        }
+        //    // Act
+        //    return calc.Add(num1, num2);
+        //}
     }
 }

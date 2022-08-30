@@ -13,7 +13,8 @@ namespace Calculator.Tests
             /// AAA
 
             // 1. Arrange
-            CalculatorProgram calc = new CalculatorProgram();
+            FakeValidator validator = new FakeValidator();
+            CalculatorProgram calc = new CalculatorProgram(validator);
             int num1 = 2;
             int num2 = 3;
             int expectedResult=5;
@@ -33,12 +34,12 @@ namespace Calculator.Tests
             /// AAA
 
             // 1. Arrange
-            CalculatorProgram calc = new CalculatorProgram();
-            int num1 = 2;
-            int num2 = 0;
+            //CalculatorProgram calc = new CalculatorProgram();
+            //int num1 = 2;
+            //int num2 = 0;
 
-            // Act && Assert
-            Assert.That(() => calc.Div(num1, num2), Throws.Exception.TypeOf<DivideByZeroException>());
+            //// Act && Assert
+            //Assert.That(() => calc.Div(num1, num2), Throws.Exception.TypeOf<DivideByZeroException>());
 
             //actualResult = calc.Div(num1, num2);
 
