@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,11 +14,13 @@ namespace Calculator.Tests
             /// AAA
 
             // 1. Arrange
-            FakeValidator validator = new FakeValidator();
-            CalculatorProgram calc = new CalculatorProgram(validator);
+            Mock<Validator> mockValidator = new Mock<Validator>();
+            mockValidator.Setup(m => m.IsValid(It.IsAny<int>())).Returns(true);
+            //FakeValidator validator = new FakeValidator();
+            CalculatorProgram calc = new CalculatorProgram(mockValidator.Object);
             int num1 = 2;
             int num2 = 3;
-            int expectedResult=5;
+            int expectedResult = 5;
             int actualResult;
 
             // Act

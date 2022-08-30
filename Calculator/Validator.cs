@@ -15,11 +15,11 @@ namespace Calculator
         }
     }
 
-    public class FakeValidator : Validator
-    {
-        public override bool IsValid(int num)
-        {
-            return true;
-        }
-    }
+    //public class FakeValidator : Validator
+    //{
+    //    public override bool IsValid(int num)
+    //    {
+    //        return true;
+    //    }
+    //}
 }
